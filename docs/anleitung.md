@@ -144,7 +144,7 @@ shop()  { cd ~/projekte/shop  && claude "$@"; }
 notes() { cd ~/projekte/notes && claude "$@"; }
 ```
 
-### Warum nicht einfach im Schrank-Verzeichnis starten?
+### Warum nicht einfach im Home-Verzeichnis starten?
 
 Du kannst `claude` auch aus `~` starten. Dann liest Claude aber `~/CLAUDE.md` (wenn vorhanden) oder gar nichts Projekt-Spezifisches. Die Reflexe und Workflows aus diesem Repo greifen erst, wenn Claude die `CLAUDE.md` *deines Projekts* findet — und das tut es zuverlaessig nur, wenn das Arbeitsverzeichnis stimmt.
 
