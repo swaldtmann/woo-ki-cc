@@ -29,8 +29,8 @@ Claude Code ist nicht an eine einzelne Oberflaeche gebunden. Du hast die Wahl:
 | **CLI im Terminal** — `claude` aufrufen | Wer ohnehin im Terminal lebt. Schnell, leichtgewichtig, kommt mit `tmux`/`screen` klar — beides ist aber **nicht erforderlich**. |
 | **VS Code Extension** | Wahrscheinlich der bequemste Einstieg fuer IT-Leute, die nicht ausschliesslich CLI arbeiten. Code-Diffs visuell, Hover, Navigation. |
 | **JetBrains Extension** | IntelliJ, PyCharm, GoLand, WebStorm usw. — analog zur VS-Code-Variante. |
-| **Desktop-App** (Mac/Windows) | Eigenstaendiges Fenster. Gut, wenn du Claude losgeloest vom Editor laufen lassen willst. |
-| **Web-App** auf https://claude.ai/code | Ohne Installation, Browser reicht. Praktisch unterwegs oder auf fremden Geraeten. |
+| **Desktop-App** (Mac/Windows) | Eigenstaendiges Fenster. Gut, wenn du Claude losgeloest vom Editor laufen lassen willst. Eigene Anleitung: [`desktop.md`](desktop.md). |
+| **Web-App** auf https://claude.ai/code | Ohne Installation, Browser reicht. Praktisch unterwegs oder auf fremden Geraeten. Eigene Anleitung: [`web.md`](web.md). |
 
 **Alle Varianten lesen `CLAUDE.md` aus dem Projektordner** — die Reflexe und Workflows wirken in jeder gleich. Hooks und Statusline funktionieren primaer in CLI und Desktop-App; in den IDE-Extensions teils begrenzt (siehe deren Doku).
 
