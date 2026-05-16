@@ -30,8 +30,7 @@ Claude liest `CLAUDE.md` beim Start automatisch und fuehrt sich entsprechend.
 | Repo | Wer? | Was? |
 |------|------|------|
 | **woo-ki-starter** | Tool-agnostisch (Kilo/Cursor/Windsurf/CC) | 5 Workflow-Prinzipien, AGENTS.md |
-| **woo-ki-cc** (hier) | Claude-Code-fokussiert, Free-tauglich | 4 Reflexe + 5 Workflows + CC-Mechanik |
-| **woo-ki-performance** (privat) | Stephans Beratungs-Kunden | Hooks, Skills, MCP, Subagents — als Workshop-Begleitung |
+| **woo-ki-cc** (hier) | Claude-Code-fokussiert, Free-tauglich | 4 Reflexe + 7 Workflows + CC-Mechanik |
 
 ## Inhalt
 
