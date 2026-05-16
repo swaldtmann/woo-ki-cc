@@ -36,6 +36,23 @@ Claude Code ist nicht an eine einzelne Oberflaeche gebunden. Du hast die Wahl:
 
 Empfehlung fuer den Anfang: VS Code Extension *oder* CLI. Wahl ist Geschmackssache.
 
+### Was vom Repo wo greift
+
+Nicht jedes Feature dieses Repos laeuft in jeder Variante. Stand 2026-05 — pruef die jeweilige Claude-Code-Doku, wenn du dir unsicher bist:
+
+| Feature | CLI | VS Code | JetBrains | Desktop | Web (claude.ai/code) |
+|---------|:---:|:-------:|:---------:|:-------:|:--------------------:|
+| `CLAUDE.md` Auto-Load | ja | ja | ja | ja | ja (per Projekt-Anbindung) |
+| `context.md` + `notizen/` | ja | ja | ja | ja | ja |
+| Tags (`#h`, `#w`, ...) | ja | ja | ja | ja | ja (reine Konvention, kein Tool) |
+| Statusline | **ja** | nein (IDE hat eigene Status-Bar) | nein | unklar | nein |
+| Hooks (`PreToolUse` etc.) | **ja** | wahrscheinlich ja | wahrscheinlich ja | wahrscheinlich ja | nein (kein lokales Filesystem) |
+| `settings.json` Permissions | ja | ja | ja | ja | begrenzt |
+
+Kern-Wirkung des Repos — die **Reflexe + Workflows** in `CLAUDE.md` — laeuft **ueberall**. Die Mechanik-Schicht (Statusline + Hooks + Permission-Allow/Deny) lebt vor allem in CLI und Desktop; in IDE-Extensions teilweise, im Web kaum.
+
+Praktischer Tipp: VS Code + CLI parallel — IDE zum Coden und Diff-Lesen, CLI wenn du Hooks oder die Statusline brauchst.
+
 ## Vorbereitung
 
 Du brauchst:
