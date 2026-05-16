@@ -7,6 +7,9 @@
   },
 
   "permissions": {
+    "_comment_defaultMode": "Permission-Modus. 'default' fragt bei jedem Tool das nicht in 'allow' steht. 'acceptEdits' laesst Edit/Write durch. 'plan' = read-only. 'bypassPermissions' = ALLES ohne Rueckfrage (nur in Wegwerf-Sandbox!). Siehe docs/anleitung.md → Permission-Modi.",
+    "defaultMode": "default",
+
     "_comment_allow": "Tools, die ohne Rueckfrage erlaubt sind. Spart Klicks bei Routine-Befehlen.",
     "allow": [
       "Bash(ls:*)",
@@ -17,7 +20,7 @@
       "Bash(git diff:*)",
       "Bash(git log:*)"
     ],
-    "_comment_deny": "Tools, die nie laufen sollen. Beispiel: UI-Choice-Fragen ausschalten.",
+    "_comment_deny": "Tools, die nie laufen sollen. Auch im bypassPermissions-Modus wirksam.",
     "deny": []
   },
 

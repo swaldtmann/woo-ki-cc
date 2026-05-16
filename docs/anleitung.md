@@ -15,6 +15,7 @@ Hier ist die lange Form. Wenn du nur loslegen willst: `README.md` reicht. Wenn d
 - [Statusline einrichten](#statusline-einrichten)
 - [Hooks einrichten](#hooks-einrichten)
 - [`settings.json` anpassen](#settingsjson-anpassen)
+- [Permission-Modi — Vorsicht beim Komfort](#permission-modi--vorsicht-beim-komfort)
 - [Weiter rein: Skills, Subagents, MCP](#weiter-rein-skills-subagents-mcp)
 - [Free vs Pro — was sich praktisch unterscheidet](#free-vs-pro--was-sich-praktisch-unterscheidet)
 
@@ -375,6 +376,65 @@ Wichtige Bloecke:
 ```
 
 `permissions.allow` spart Klicks — Routine-Befehle laufen ohne dass du jeden einzeln freigeben musst. Achte darauf, nicht zu grob zu erlauben (`Bash(*)` ist offensichtlich nicht klug).
+
+---
+
+## Permission-Modi — Vorsicht beim Komfort
+
+Claude Code kennt mehrere **Modi**, wie ueber Permissions entschieden wird. Modi haengen *ueber* der allow/deny-Liste — sie regeln den Grundton.
+
+| Modus | Was passiert | Wann sinnvoll |
+|-------|--------------|---------------|
+| `default` | Bei jedem Tool, das nicht in `allow` steht, fragt Claude dich. | Default. Sicher, manchmal nervig. |
+| `acceptEdits` | Edit / Write / MultiEdit laufen ohne Rueckfrage, alle anderen Tools wie `default`. | Wenn du gerade refactorst und keine Lust hast, jedes Save zu bestaetigen. |
+| `plan` | Claude darf nichts schreiben oder ausfuehren, nur lesen und planen. Endet mit "Plan zur Freigabe". | Wenn du erst sehen willst, was sie tun *wuerde*. Hervorragend fuer riskante Eingriffe. |
+| `bypassPermissions` | **Alle Tools laufen ohne Rueckfrage** — auch `rm`, `curl`, alles. | **Nur in Sandbox / Container / Wegwerf-VM.** Auf der echten Maschine: nein. |
+
+### Modus setzen
+
+Pro Session beim Start:
+
+```bash
+claude --permission-mode acceptEdits
+```
+
+Permanent in `settings.json` (NICHT empfohlen fuer `bypassPermissions`):
+
+```json
+{
+  "permissions": {
+    "defaultMode": "acceptEdits"
+  }
+}
+```
+
+In der Session umschalten: `/mode` (oder die Tastenkombination, die deine Variante anzeigt).
+
+### Der gefaehrliche Modus
+
+`bypassPermissions` (oder das CLI-Flag `--dangerously-skip-permissions`) deaktiviert alle Rueckfragen. Auf deiner Arbeitsmaschine bedeutet das: Claude kann ohne dein OK Dateien loeschen, Netzwerk-Aufrufe machen, beliebige Befehle ausfuehren. Eine einzige falsche Annahme (Reflex 1!) kann teuer werden.
+
+**Wann es trotzdem ok ist:**
+
+- In einem Docker-Container, der nach der Session weggeworfen wird.
+- In einer Wegwerf-VM oder Cloud-Sandbox.
+- Auf einer Maschine, auf der nichts liegt, was du nicht reproduzieren kannst.
+
+**Wann es nie ok ist:**
+
+- Auf deinem Arbeitsrechner mit privaten Daten / Projekten.
+- Auf Servern mit Produktion oder Kunden-Code.
+- "Nur fuer einen Moment" — bleibt selten ein Moment.
+
+### Mindeschutz, wenn du bypass nutzt
+
+- **Hooks aktiv lassen.** `hooks/block-dangerous-bash.sh` aus diesem Repo blockt offensichtliche Katastrophen auch im Bypass-Modus, weil PreToolUse vor der Tool-Ausfuehrung greift.
+- **Wegwerf-Umgebung.** Vor `claude --dangerously-skip-permissions`: bist du sicher, dass du in dem Container / der VM bist, die du gleich loeschen kannst? Wenn nicht: zurueck zu `default`.
+- **Kein Schreibzugriff auf Sensibles.** Mount nur das Projekt rein, nicht `$HOME`.
+
+### Empfehlung fuer Lo
+
+Bleib bei **`default`** oder schalt fuer laengere Edit-Sessions auf **`acceptEdits`**. `bypassPermissions` lass liegen, bis du eine Sandbox aufgesetzt hast, die wirklich Wegwerf ist.
 
 ---
 
