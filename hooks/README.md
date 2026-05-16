@@ -51,4 +51,4 @@ Dann Scripte nach `~/.claude/hooks/` kopieren und `chmod +x`.
 2. Schreib ein Script, das beim passenden Event triggert.
 3. Im Hook-Script bekommst du den Event als JSON auf stdin, gibst Anweisungen ueber stdout/Exit-Code zurueck.
 
-Vollstaendige Hook-Doku: https://docs.claude.com/claude-code/hooks
+Vollstaendige Hook-Doku: https://code.claude.com/docs/en/hooks
