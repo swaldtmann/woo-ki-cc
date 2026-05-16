@@ -23,6 +23,7 @@
 #        }
 #
 # Voraussetzung: jq + awk + date (macOS-Stil; auf Linux ggf. date -d statt -j).
+# Auf Windows: WSL oder Git Bash. Native PowerShell-Variante: PR willkommen.
 
 input=$(cat)
 

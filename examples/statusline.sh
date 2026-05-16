@@ -15,6 +15,8 @@
 #   4. Claude Code neu starten
 #
 # Voraussetzung: jq installiert (brew install jq / apt install jq).
+# Auf Windows: WSL oder Git Bash. Eine native PowerShell-Variante gibt es
+# (noch) nicht — PR willkommen.
 
 input=$(cat)
 

@@ -298,6 +298,16 @@ Die `→52%`-Pfeile sind Burn-Rate-Projektionen — *wo wirst du beim naechsten 
 
 Beide Statusline-Scripte nutzen **ausschliesslich offiziell dokumentierte stdin-Felder** (https://code.claude.com/docs/en/statusline → "Available data"). Kein API-Token, kein OAuth-Hack, kein Reverse Engineering.
 
+### Windows-Hinweis
+
+Die mitgelieferten Scripte sind Bash. Auf Windows gibt es drei Wege:
+
+- **WSL (Windows Subsystem for Linux)** — bash funktioniert nativ, Scripte laufen wie auf Mac/Linux. Empfohlen.
+- **Git Bash** — kommt mit Git for Windows, reicht meist auch.
+- **PowerShell-Variante** — gibt es im Repo nicht. Wenn du eine schreibst: PR willkommen (`CONTRIBUTING.md`). Die JSON-Felder sind dieselben, du musst nur Bash-Syntax durch PowerShell ersetzen.
+
+Wenn du Claude Code in der VS-Code-Extension nutzt, ist die Statusline ohnehin nicht relevant — VS Code hat seine eigene Status-Bar.
+
 ---
 
 ## Hooks einrichten
