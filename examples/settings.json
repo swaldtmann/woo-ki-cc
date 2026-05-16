@@ -1,0 +1,26 @@
+{
+  "_comment": "Beispiel-Settings fuer Claude Code. Nach ~/.claude/settings.json kopieren oder einzelne Bloecke uebernehmen.",
+
+  "statusLine": {
+    "type": "command",
+    "command": "bash $HOME/.claude/statusline.sh"
+  },
+
+  "permissions": {
+    "_comment_allow": "Tools, die ohne Rueckfrage erlaubt sind. Spart Klicks bei Routine-Befehlen.",
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)"
+    ],
+    "_comment_deny": "Tools, die nie laufen sollen. Beispiel: UI-Choice-Fragen ausschalten.",
+    "deny": []
+  },
+
+  "_comment_effort": "Wie viel Claude bei jeder Antwort 'nachdenkt'. low/medium/high. medium ist ein guter Default.",
+  "effortLevel": "medium"
+}
