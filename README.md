@@ -47,8 +47,6 @@ Zwei Statusline-Varianten:
 - `examples/statusline.sh` — minimal: Modell + Context-Prozent.
 - `examples/statusline-full.sh` — reich: zusaetzlich 5h- und 7d-Rate-Limit mit Burn-Rate-Pfeil und Reset-Zeit.
 
-Beide nutzen ausschliesslich offiziell dokumentierte stdin-Felder. Keine API-Calls, kein OAuth-Token, keine Reverse-Engineering-Tricks.
-
 Statusline, Hooks und settings.json sind **optional**. Du wirst nicht erschlagen — pickst was du brauchst. Die Anleitung sagt, was wofuer gut ist.
 
 ## Free vs Pro — kurz

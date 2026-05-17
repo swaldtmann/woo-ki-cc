@@ -1,6 +1,6 @@
 # Autoren
 
-Dieses Repository ist eine Zusammenarbeit zwischen Mensch und KI. Wir machen das transparent.
+Texte, Beispiele und Hooks dieses Repos sind in Zusammenarbeit zwischen Stephan Waldtmann und Claude Code entstanden.
 
 ## Konzept und Pflege
 

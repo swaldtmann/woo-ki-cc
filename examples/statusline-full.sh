@@ -4,9 +4,7 @@
 # Zeigt Modellname, Context-Auslastung und Rate-Limit-Verbrauch (5h + 7d)
 # inklusive Burn-Rate-Projektion und Reset-Zeit.
 #
-# Quelle: https://code.claude.com/docs/en/statusline (Available data)
-# Alle Felder sind offiziell dokumentiert. Keine API-Calls, kein OAuth-Token,
-# kein Reverse Engineering — alles kommt ueber das offizielle stdin-Schema.
+# Datenquelle: stdin nach https://code.claude.com/docs/en/statusline (Available data).
 #
 # Beispiel-Output:
 #   Claude Opus 4.7 | ctx 12% | 5h 34%→52% (2h17m) | wk 21%→24% (5d)

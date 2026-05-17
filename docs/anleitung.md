@@ -50,7 +50,7 @@ Nicht jedes Feature dieses Repos laeuft in jeder Variante. Stand 2026-05 — pru
 | Hooks (`PreToolUse` etc.) | **ja** | wahrscheinlich ja | wahrscheinlich ja | wahrscheinlich ja | nein (kein lokales Filesystem) |
 | `settings.json` Permissions | ja | ja | ja | ja | begrenzt |
 
-Kern-Wirkung des Repos — die **Reflexe + Workflows** in `CLAUDE.md` — laeuft **ueberall**. Die Mechanik-Schicht (Statusline + Hooks + Permission-Allow/Deny) lebt vor allem in CLI und Desktop; in IDE-Extensions teilweise, im Web kaum.
+**Reflexe + Workflows** in `CLAUDE.md` wirken **ueberall**. Die Mechanik-Schicht (Statusline + Hooks + Permission-Allow/Deny) lebt vor allem in CLI und Desktop; in IDE-Extensions teilweise, im Web kaum.
 
 Praktischer Tipp: VS Code + CLI parallel — IDE zum Coden und Diff-Lesen, CLI wenn du Hooks oder die Statusline brauchst.
 
@@ -212,7 +212,7 @@ Naechste Session, `claude` starten, `#w` tippen. Claude liest `context.md` und k
 
 Vor jedem "fertig"-Meldemoment, frag Claude `#bei`. Sie schreibt dann eine vollstaendige Liste in `notizen/JJJJ-MM-TT_beifang.md` — Ideen, Probleme, Unsicherheiten, Beobachtungen.
 
-Das ist der **wichtigste** Workflow nach `#h`/`#w`. KI-Agenten finden waehrend der Arbeit Sachen, die nicht zum Auftrag gehoeren, sagen aber nichts darueber — weil sie meinen, das stoere den Fokus. `#bei` macht das sichtbar. Du triagierst spaeter, ob daraus eine Aufgabe wird.
+KI-Agenten finden waehrend der Arbeit Sachen, die nicht zum Auftrag gehoeren, sagen aber nichts darueber — weil sie meinen, das stoere den Fokus. `#bei` macht das sichtbar. Du triagierst spaeter, ob daraus eine Aufgabe wird.
 
 ### `#todo` — Aufgaben fuehren
 
@@ -294,9 +294,7 @@ Die `→52%`-Pfeile sind Burn-Rate-Projektionen — *wo wirst du beim naechsten 
    ```
 4. Claude Code neu starten.
 
-### Sauberkeitsversprechen
-
-Beide Statusline-Scripte nutzen **ausschliesslich offiziell dokumentierte stdin-Felder** (https://code.claude.com/docs/en/statusline → "Available data"). Kein API-Token, kein OAuth-Hack, kein Reverse Engineering.
+Datenquelle der Scripte: stdin nach https://code.claude.com/docs/en/statusline ("Available data").
 
 ### Windows-Hinweis
 

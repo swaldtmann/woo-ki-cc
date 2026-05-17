@@ -12,7 +12,7 @@ Pull Requests, Issues und Diskussion sind willkommen. Repo lebt auf Codeberg.
 ## Was wir nicht aufnehmen
 
 - Code, der API-Tokens, OAuth-Tokens oder nicht-dokumentierte Endpoints anzapft.
-- "Mega-Frameworks". Das Repo bleibt schlank — sechs Dateien, klare Reflexe, klare Workflows. Wenn dein Beitrag eine eigene Welt aufmacht, gehoert er in dein eigenes Repo.
+- "Mega-Frameworks". Wenn dein Beitrag eine eigene Welt aufmacht, gehoert er in dein eigenes Repo.
 - Generierte Boilerplate ohne erkennbaren Mehrwert.
 
 ## Wie
@@ -41,8 +41,6 @@ docs: Reflex 4 (Ziel statt Schritte) klarer formuliert
 
 Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 ```
-
-Das ist keine Pflicht, aber wir machen es. Transparenz darueber, wer die Worte gesetzt hat, ist Teil der Sache.
 
 ## Versionierung
 

@@ -98,7 +98,7 @@ Wenn ich `#ahh` sage — oder wenn was Ueberraschendes passiert, im Guten wie im
 - Was hat dich/mich ueberrascht?
 - Warum?
 
-Staunen ist Treibstoff. Nicht nur Probleme festhalten, auch Durchbrueche.
+Auch Durchbrueche festhalten, nicht nur Probleme.
 
 ### 6. Ursachensuche (`#rca`)
 
