@@ -1,16 +1,35 @@
 {
-  "_comment": "Beispiel-Settings fuer Claude Code. Nach ~/.claude/settings.json kopieren oder einzelne Bloecke uebernehmen.",
+  "_comment": "Beispiel-Settings für Claude Code. Nach ~/.claude/settings.json kopieren oder einzelne Blöcke übernehmen.",
 
   "statusLine": {
     "type": "command",
     "command": "bash $HOME/.claude/statusline.sh"
   },
 
+  "_comment_hooks": "Auskommentiert via fuehrendem Underscore. Zum Aktivieren: '_hooks' in 'hooks' umbenennen, vorher Scripte nach ~/.claude/hooks/ kopieren und chmod +x. Siehe docs/anleitung.md -> Hooks einrichten.",
+  "_hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          { "type": "command", "command": "bash $HOME/.claude/hooks/block-dangerous-bash.sh" }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          { "type": "command", "command": "bash $HOME/.claude/hooks/inject-date.sh" }
+        ]
+      }
+    ]
+  },
+
   "permissions": {
-    "_comment_defaultMode": "Permission-Modus. 'default' fragt bei jedem Tool das nicht in 'allow' steht. 'acceptEdits' laesst Edit/Write durch. 'plan' = read-only. 'bypassPermissions' = ALLES ohne Rueckfrage (nur in Wegwerf-Sandbox!). Siehe docs/anleitung.md → Permission-Modi.",
+    "_comment_defaultMode": "Permission-Modus. 'default' fragt bei jedem Tool das nicht in 'allow' steht. 'acceptEdits' lässt Edit/Write durch. 'plan' = read-only. 'bypassPermissions' = ALLES ohne Rückfrage (nur in Wegwerf-Sandbox!). Siehe docs/anleitung.md → Permission-Modi.",
     "defaultMode": "default",
 
-    "_comment_allow": "Tools, die ohne Rueckfrage erlaubt sind. Spart Klicks bei Routine-Befehlen.",
+    "_comment_allow": "Tools, die ohne Rückfrage erlaubt sind. Spart Klicks bei Routine-Befehlen.",
     "allow": [
       "Bash(ls:*)",
       "Bash(cat:*)",

@@ -1,13 +1,13 @@
 #!/bin/bash
-# PreToolUse-Hook fuer Bash: blockt vier Klassiker.
+# PreToolUse-Hook für Bash: blockt vier Klassiker.
 #
-# Findet das Muster eine Uebereinstimmung, gibt der Hook Exit-Code 2 zurueck
-# und Claude bekommt eine Begruendung statt das Ergebnis.
+# Findet das Muster eine Übereinstimmung, gibt der Hook Exit-Code 2 zurück
+# und Claude bekommt eine Begründung statt das Ergebnis.
 #
 # Greift NICHT bei: `eval 'rm -rf /'`, `sh -c '...'`, `cd / && rm -rf .`,
 # long-options (`rm --recursive --force /`). Das ist Absicht — wer echten
 # Schutz braucht: Container, VM, Read-only-Mount. Dieser Hook deckt die
-# offensichtlichen Tippfehler-Pfade ab, kein vollstaendiges Sandboxing.
+# offensichtlichen Tippfehler-Pfade ab, kein vollständiges Sandboxing.
 #
 # stdin: JSON mit Tool-Aufruf
 # Wir parsen .tool_input.command und matchen gegen eine kleine Blacklist.
@@ -37,7 +37,7 @@ fi
 
 # Curl/Wget direkt in Shell pipen
 if echo "$cmd" | grep -qE '(curl|wget)\s+[^|]+\|\s*(bash|sh|zsh)\b'; then
-    echo "Blockiert: 'curl ... | bash' fuehrt unbekannten Code aus. Erst herunterladen, dann pruefen, dann ausfuehren." >&2
+    echo "Blockiert: 'curl ... | bash' führt unbekannten Code aus. Erst herunterladen, dann prüfen, dann ausführen." >&2
     exit 2
 fi
 

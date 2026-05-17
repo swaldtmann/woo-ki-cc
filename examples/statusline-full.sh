@@ -1,5 +1,5 @@
 #!/bin/bash
-# Reicher Statusline-Helper fuer Claude Code.
+# Reicher Statusline-Helper für Claude Code.
 #
 # Zeigt Modellname, Context-Auslastung und Rate-Limit-Verbrauch (5h + 7d)
 # inklusive Burn-Rate-Projektion und Reset-Zeit.
@@ -20,8 +20,8 @@
 #          "command": "bash $HOME/.claude/statusline.sh"
 #        }
 #
-# Voraussetzung: jq + awk + date. parse_reset_ts faellt von BSD-date (macOS)
-# auf GNU-date (Linux) zurueck — beide Wege probiert, kein OS-Switch noetig.
+# Voraussetzung: jq + awk + date. parse_reset_ts fällt von BSD-date (macOS)
+# auf GNU-date (Linux) zurück — beide Wege probiert, kein OS-Switch nötig.
 # Auf Windows: WSL oder Git Bash. Native PowerShell-Variante: PR willkommen.
 
 input=$(cat)
@@ -33,7 +33,7 @@ h5_reset=$(echo "$input" | jq -r '.rate_limits.five_hour.resets_at // empty')
 wk_util=$(echo "$input"  | jq -r '.rate_limits.seven_day.used_percentage // empty')
 wk_reset=$(echo "$input" | jq -r '.rate_limits.seven_day.resets_at // empty')
 
-# Historie fuer Burn-Rate
+# Historie für Burn-Rate
 CACHE_DIR="$HOME/.claude/usage-cache"
 HISTORY_FILE="$CACHE_DIR/history.tsv"
 HISTORY_MAX_MIN=60

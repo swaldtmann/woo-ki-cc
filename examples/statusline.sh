@@ -1,5 +1,5 @@
 #!/bin/bash
-# Minimaler Statusline-Helper fuer Claude Code.
+# Minimaler Statusline-Helper für Claude Code.
 #
 # Zeigt Modellname und Context-Auslastung in Prozent.
 # Quelle: https://code.claude.com/docs/en/statusline (Available data)
