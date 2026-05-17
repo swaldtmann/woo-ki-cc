@@ -11,6 +11,9 @@
 # Anpassbar: Du kannst hier auch Reminder, Wochentag, Tageszeit, oder
 # eigene Hinweise einbauen — alles was Claude beim Antworten wissen soll.
 
+# jq fehlt: sauber raus, sonst wuerde der Hook stumm versagen
+command -v jq >/dev/null 2>&1 || exit 0
+
 today=$(date '+%A, %d.%m.%Y')
 
 jq -n --arg ctx "Heute ist $today." '{

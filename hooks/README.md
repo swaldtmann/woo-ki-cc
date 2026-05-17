@@ -8,7 +8,7 @@ Hooks sind kleine Shell-Scripte, die Claude Code an bestimmten Stellen ausfuehrt
 
 | Datei | Typ | Was sie tut |
 |-------|-----|-------------|
-| `block-dangerous-bash.sh` | `PreToolUse` (Bash) | Blockt offensichtlich gefaehrliche Shell-Befehle (`rm -rf /`, `:(){:|:&};:`). |
+| `block-dangerous-bash.sh` | `PreToolUse` (Bash) | Blockt vier Klassiker: Fork-Bomb, `rm -rf /` bzw. `~`, `dd of=/dev/...`, `curl\|bash`. Faengt nicht alles (wer per `eval`, `sh -c` oder `cd / && rm -rf .` ausweicht, kommt durch). Kein Sandboxing-Ersatz — fuer echten Schutz: Container/VM. |
 | `inject-date.sh` | `UserPromptSubmit` | Haengt das heutige Datum an deinen Prompt — Claude weiss sonst nicht, welcher Tag ist. |
 
 ## Aktivieren

@@ -20,7 +20,8 @@
 #          "command": "bash $HOME/.claude/statusline.sh"
 #        }
 #
-# Voraussetzung: jq + awk + date (macOS-Stil; auf Linux ggf. date -d statt -j).
+# Voraussetzung: jq + awk + date. parse_reset_ts faellt von BSD-date (macOS)
+# auf GNU-date (Linux) zurueck — beide Wege probiert, kein OS-Switch noetig.
 # Auf Windows: WSL oder Git Bash. Native PowerShell-Variante: PR willkommen.
 
 input=$(cat)
@@ -53,8 +54,9 @@ parse_reset_ts() {
     if [[ "$r" =~ ^[0-9]+$ ]]; then
         echo "$r"
     else
-        # macOS-Variante. Linux: date -d "${r%.*}" +%s
-        date -j -f "%Y-%m-%dT%H:%M:%S" "${r%.*}" "+%s" 2>/dev/null
+        # macOS-BSD-date zuerst, sonst GNU-date (Linux)
+        date -j -f "%Y-%m-%dT%H:%M:%S" "${r%.*}" "+%s" 2>/dev/null \
+            || date -d "${r%.*}" +%s 2>/dev/null
     fi
 }
 

@@ -102,7 +102,7 @@ Im Projektordner:
 claude
 ```
 
-Sag etwa: "Lies CLAUDE.md und gib mir eine Kurzfassung der Regeln, an die du dich halten wirst." Wenn die Antwort die vier Reflexe und die fuenf Workflows enthaelt, ist alles eingerichtet.
+Sag etwa: "Lies CLAUDE.md und gib mir eine Kurzfassung der Regeln, an die du dich halten wirst." Wenn die Antwort die vier Reflexe und die sieben Workflows enthaelt, ist alles eingerichtet.
 
 Beende die Session mit `#h` — Claude schreibt eine Uebergabe in `context.md`. Naechste Session: `claude` starten, `#w` sagen, weiter geht's.
 
@@ -416,7 +416,7 @@ Permanent in `settings.json` (NICHT empfohlen fuer `bypassPermissions`):
 }
 ```
 
-In der Session umschalten: `/mode` (oder die Tastenkombination, die deine Variante anzeigt).
+In der Session umschalten: `Shift+Tab` cycelt durch die Modi (Anzeige im Footer), oder `/permissions` oeffnet das Berechtigungs-Menue.
 
 ### Der gefaehrliche Modus
 
