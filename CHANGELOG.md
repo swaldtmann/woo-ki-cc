@@ -4,6 +4,13 @@ Alle nennenswerten Änderungen werden hier festgehalten. Format folgt [Keep a Ch
 
 ## [Unreleased]
 
+## [0.1.1] — 2026-05-17
+
+### Geändert
+
+- **Tech-Audit-Fixes (Byrd)**: `statusline-full.sh` mit GNU-date-Fallback für Linux; `block-dangerous-bash.sh` deckt `${HOME}` und `dd of=/dev/(mmcblk|hd|xvd)*` zusätzlich ab; `inject-date.sh` mit `command -v jq`-Guard; Doku-Inkonsistenzen `fuenf` → `sieben Workflows` und `/mode` → `Shift+Tab` / `/permissions` korrigiert; `hooks/README.md` ehrlicher zur Reichweite des Bash-Guards (kein Sandboxing-Ersatz).
+- **Sprach-Audit (Eva)**: Umlaute durchgängig (ä/ö/ü/ß statt ae/oe/ue/ss) in allen Texten, Hooks, Beispiel-Scripten; Pathos-Reste und Selbstrechtfertigung entfernt; Karpathy-Tradition als Block-Zitat direkt in `CLAUDE.md`; `#rca`-Marker-Schritt expliziert; Schnellreferenz-Tabelle in `CLAUDE.md` ergänzt.
+
 ## [0.1.0] — 2026-05-16
 
 ### Hinzugefügt

@@ -1,6 +1,6 @@
 # woo-ki-cc
 
-[![Version](https://img.shields.io/badge/version-0.1.0-blue)](CHANGELOG.md) [![License](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
+[![Version](https://img.shields.io/badge/version-0.1.1-blue)](CHANGELOG.md) [![License](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
 
 Claude-Code-Starterkit für IT-Leute, die strukturiert mit KI arbeiten wollen.
 
