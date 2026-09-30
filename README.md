@@ -29,7 +29,7 @@ Claude liest `CLAUDE.md` beim Start automatisch und führt sich entsprechend.
 
 | Repo | Wer? | Was? |
 |------|------|------|
-| [**woo-ki-starter**](https://codeberg.org/StephanWaldtmann/woo-ki-starter) | Tool-agnostisch (Kilo/Cursor/Windsurf/CC) | 5 Workflow-Prinzipien, AGENTS.md |
+| [**woo-ki-starter**](https://git.authbox.de/stephan/woo-ki-starter) | Tool-agnostisch (Kilo/Cursor/Windsurf/CC) | 5 Workflow-Prinzipien, AGENTS.md |
 | **woo-ki-cc** (hier) | Claude-Code-fokussiert, Free-tauglich | 4 Reflexe + 7 Workflows + CC-Mechanik |
 
 ## Inhalt
@@ -51,7 +51,7 @@ Statusline, Hooks und settings.json sind **optional**. Die Anleitung sagt, was w
 
 ## Herkunft
 
-Gewachsen aus der täglichen Arbeit von Stephan Waldtmann (https://waldtmann.de) mit Claude Code. Die vier Reflexe gehen auf Andrej Karpathys öffentliche Beobachtungen zu LLM-Coding-Fallen (Januar 2026) zurück, die Forrest Chang in seinem viralen `andrej-karpathy-skills`-Repo (https://github.com/forrestchang/andrej-karpathy-skills) in eine CLAUDE.md geformt hat — wir haben sie hier neu formuliert und mit den Workflows aus [`woo-ki-starter`](https://codeberg.org/StephanWaldtmann/woo-ki-starter) zusammengeführt.
+Gewachsen aus der täglichen Arbeit von Stephan Waldtmann (https://waldtmann.de) mit Claude Code. Die vier Reflexe gehen auf Andrej Karpathys öffentliche Beobachtungen zu LLM-Coding-Fallen (Januar 2026) zurück, die Forrest Chang in seinem viralen `andrej-karpathy-skills`-Repo (https://github.com/forrestchang/andrej-karpathy-skills) in eine CLAUDE.md geformt hat — wir haben sie hier neu formuliert und mit den Workflows aus [`woo-ki-starter`](https://git.authbox.de/stephan/woo-ki-starter) zusammengeführt.
 
 ## Mitmachen
 
